@@ -1,0 +1,28 @@
+{
+    "name": "codewithdiki/filament-group-select",
+    "description": "Simple group selector",
+    "version": "0.1",
+    "require": {
+        "filament/forms": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codewithdiki\\FilamentGroupSelect\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Diki Akbar",
+            "email": "diki.akbar1304@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codewithdiki\\FilamentGroupSelect\\FilamentGroupSelectProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
