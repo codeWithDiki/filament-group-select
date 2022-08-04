@@ -7,18 +7,15 @@ use Illuminate\Support\Collection;
 
 class GroupSelect extends \Filament\Forms\Components\Field
 {
-    protected string $view = "filament-group-select::forms.group-select";
+    use \Filament\Forms\Components\Concerns\HasOptions;
 
-    protected static array|\Closure|Collection $groups;
+    protected string $view = "filament-group-select::forms.group-select";
 
     public static function setAttribute(string $name, array|\Closure|Collection $groups)
     {
-        $static = app(static::class, [
-            'name' => $name
-        ]);
-        $static->configure();
+        $static = self::make($name);
 
-        self::$groups = $groups;
+        $static->options($groups);
 
         return $static;
     }

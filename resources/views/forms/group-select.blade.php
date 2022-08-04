@@ -1,8 +1,8 @@
 <x-forms::field-wrapper :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()" :hint="$getHint()" :hint-icon="$getHintIcon()" :required="$isRequired()" :state-path="$getStatePath()">
     <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}') }">
-        @if(!empty($getGroups()) && count($getGroups()) > 0)
+        @if(!empty($getOptions()) && count($getOptions()) > 0)
         <div class="relative">
-            @foreach($getGroups() as $group)
+            @foreach($getOptions() as $group)
                 <div x-data="{
                     show_services : false
                 }">
