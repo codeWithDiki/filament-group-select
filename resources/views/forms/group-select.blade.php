@@ -24,7 +24,7 @@
                     <ul role="list" x-cloak x-show="show_services" class="relative z-0 divide-y divide-gray-200 dark:divide-gray-600">
                         @if(isset($group['items']) && count($group['items']) > 0)
                             @foreach($group['items'] as $item)
-                                <button class="bg-white dark:bg-gray-700 text-left w-full block"
+                                <button type="button" class="bg-white dark:bg-gray-700 text-left w-full block"
                                 wire:loading.attr="disabled"
                                 @click="state = '{{ $item['value'] }}'">
                                     <div 
